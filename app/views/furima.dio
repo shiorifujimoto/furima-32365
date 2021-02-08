@@ -1,6 +1,6 @@
-<mxfile host="65bd71144e" modified="2021-02-08T06:35:18.524Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.52.1 Chrome/83.0.4103.122 Electron/9.3.5 Safari/537.36" etag="eULvTf4QFfIycBsC4IDK" version="13.10.0" type="embed">
+<mxfile host="65bd71144e" modified="2021-02-08T06:57:52.631Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.52.1 Chrome/83.0.4103.122 Electron/9.3.5 Safari/537.36" etag="gYeJK6aJpq4oJehW52hA" version="13.10.0" type="embed">
     <diagram id="oKVaaFYga90hGHUwI4pZ" name="ページ1">
-        <mxGraphModel dx="728" dy="680" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="396" dy="618" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -40,10 +40,10 @@
                 <mxCell id="60" value=" creditcard_number ( integer型, NOT NULL)" style="text;strokeColor=none;fillColor=none;spacingLeft=7;spacingRight=2;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=13;spacing=5;" parent="6" vertex="1">
                     <mxGeometry y="26" width="380" height="34" as="geometry"/>
                 </mxCell>
-                <mxCell id="61" value=" ExpMonth ( integer型, NOT NULL)" style="text;strokeColor=none;fillColor=none;spacingLeft=7;spacingRight=2;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=13;spacing=5;" parent="6" vertex="1">
+                <mxCell id="61" value=" exp_month ( integer型, NOT NULL)" style="text;strokeColor=none;fillColor=none;spacingLeft=7;spacingRight=2;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=13;spacing=5;" parent="6" vertex="1">
                     <mxGeometry y="60" width="380" height="34" as="geometry"/>
                 </mxCell>
-                <mxCell id="62" value=" ExpYear( integer型, NOT NULL)" style="text;strokeColor=none;fillColor=none;spacingLeft=7;spacingRight=2;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=13;spacing=5;" parent="6" vertex="1">
+                <mxCell id="62" value=" exp_year( integer型, NOT NULL)" style="text;strokeColor=none;fillColor=none;spacingLeft=7;spacingRight=2;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=13;spacing=5;" parent="6" vertex="1">
                     <mxGeometry y="94" width="380" height="34" as="geometry"/>
                 </mxCell>
                 <mxCell id="63" value="approval_code( integer型, NOT NULL)" style="text;strokeColor=none;fillColor=none;spacingLeft=7;spacingRight=2;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=13;spacing=5;" parent="6" vertex="1">
