@@ -29,8 +29,8 @@
 | category_id      | integer    | null: false                    |
 | status_id        | integer    | null: false                    |
 | shopping_cost_id | integer    | null: false                    |
-| shopping_area_id | integer    | null: false                    |
-| shopping_days-id | integer    | null: false                    |
+| prefecture_id    | integer    | null: false                    |
+| shopping_day_id  | integer    | null: false                    |
 
 ### Association
 
@@ -52,15 +52,15 @@
 
 ## address テーブル
 
-| Column       | Type       | Options                        |
-| ------------ | ---------- | ------------------------------ |
-| phone_number | string     | null: false                    |
-| postal_code  | integer    | null: false                    |
-| prefectures  | integer    | null: false                    |
-| city         | string     | null: false                    |
-| block        | string     | null: false                    |
-| build        | string     | null: false                    |
-| orders       | references | null: false, foreign_key: true |        
+| Column         | Type       | Options                        |
+| -------------- | ---------- | ------------------------------ |
+| phone_number   | string     | null: false                    |
+| postal_code    | string     | null: false                    |
+| prefecture_id  | integer    | null: false                    |
+| city           | string     | null: false                    |
+| block          | string     | null: false                    |
+| build          | string     |                                |
+| order          | references | null: false, foreign_key: true |        
 
 ### Association
 
