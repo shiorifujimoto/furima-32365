@@ -16,22 +16,21 @@
 ### Association
 
 - has_many :items
-- has_one  :order
+- has_many :orders
 
 ## items テーブル
 
-| Column        | Type       | Options                        |
-| ------------- | ---------- | ------------------------------ |
-| image         |            | ActiveStorageで実装            |
-| title         | string     | null: false                    |
-| description   | string     | null: false                    |
-| price         | string     | null: false                    |
-| user          | references | null: false, foreign_key: true |
-| category      |            | ActiveHashで実装               |
-| status        |            | ActiveHashで実装               |
-| shopping_cost |            | ActiveHashで実装               |
-| shopping_area |            | ActiveHashで実装               |
-| shopping_days |            | ActiveHashで実装               |
+| Column           | Type       | Options                        |
+| ---------------- | ---------- | ------------------------------ |
+| title            | string     | null: false                    |
+| description      | text       | null: false                    |
+| price            | integer    | null: false                    |
+| user             | references | null: false, foreign_key: true |
+| category_id      | integer    | null: false                    |
+| status_id        | integer    | null: false                    |
+| shopping_cost_id | integer    | null: false                    |
+| shopping_area_id | integer    | null: false                    |
+| shopping_days-id | integer    | null: false                    |
 
 ### Association
 
@@ -55,13 +54,13 @@
 
 | Column       | Type       | Options                        |
 | ------------ | ---------- | ------------------------------ |
-| phone_number | integer    | null: false                    |
-| postal_code  |            | ActiveHashで実装               |
-| prefectures  |            | ActiveHashで実装               |
-| city         |            | ActiveHashで実装               |
-| block        |            | ActiveHashで実装               |
-| build        |            | ActiveHashで実装               |
-| orders       | references | null: false, foreign_key: true |
+| phone_number | string     | null: false                    |
+| postal_code  | integer    | null: false                    |
+| prefectures  | integer    | null: false                    |
+| city         | string     | null: false                    |
+| block        | string     | null: false                    |
+| build        | string     | null: false                    |
+| orders       | references | null: false, foreign_key: true |        
 
 ### Association
 
