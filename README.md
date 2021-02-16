@@ -22,10 +22,10 @@
 
 | Column           | Type       | Options                        |
 | ---------------- | ---------- | ------------------------------ |
+| user             | references | null: false, foreign_key: true |
 | title            | string     | null: false                    |
 | description      | text       | null: false                    |
 | price            | integer    | null: false                    |
-| user             | references | null: false, foreign_key: true |
 | category_id      | integer    | null: false                    |
 | status_id        | integer    | null: false                    |
 | shopping_cost_id | integer    | null: false                    |
@@ -34,7 +34,7 @@
 
 ### Association
 
-- belong_to :user
+- belongs_to :user
 - has_one   :order
 
 ## orders テーブル
@@ -46,8 +46,8 @@
 
 ### Association
 
-- belong_to :user
-- belong_to :item
+- belongs_to :user
+- belongs_to :item
 - has_one   :address
 
 ## address テーブル
@@ -64,4 +64,4 @@
 
 ### Association
 
-- belong_to :order
+- belongs_to :order
