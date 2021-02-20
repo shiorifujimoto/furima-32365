@@ -1,13 +1,7 @@
 class ItemsController < ApplicationController
-<<<<<<< HEAD
   before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
   before_action :set_item, only: [:show, :edit, :update, :destroy]
   before_action :correct_user, only: [:edit, :update, :destroy]
-=======
-  before_action :authenticate_user!, only: [:new, :create, :edit, :update]
-  before_action :set_item, only: [:show, :edit, :update]
-  before_action :correct_user, only: [:edit, :update]
->>>>>>> parent of 3873092... 商品削除機能
 
   def index
     @items = Item.all.order('created_at DESC')
@@ -40,6 +34,11 @@ class ItemsController < ApplicationController
     end
   end
 
+  def destroy
+    @item.destroy
+    redirect_to root_path
+  end
+  
   private
 
   def item_params
