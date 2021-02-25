@@ -7,7 +7,7 @@ require("@rails/ujs").start()
 // require("turbolinks").start() // コメントアウトする
 require("@rails/activestorage").start()
 require("channels")
-require("item_price")
+require("../item_price")
 require("../card")
 
 
