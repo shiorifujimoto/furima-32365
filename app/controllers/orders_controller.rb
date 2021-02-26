@@ -5,8 +5,14 @@ class OrdersController < ApplicationController
   end
 
   def create
+    # binding.pry
     @order = Order.new(order_params)
     if @order.vaild?
+      # Payjp.api_key =""
+      # Payjp::Charge.create(
+      #   card: order_params[:token],
+      #   currency: 'jpy'
+      # )
       @order.save
       return redirect_to root_path
     else
@@ -17,6 +23,6 @@ class OrdersController < ApplicationController
   private
 
   def order_params
-    params.require(:order)
+    params.require(:order).permit(:phone_number, :postal_code, :prefecture_id, :city, :block, :build).merge(user_id: current_user.id, item_id: params[:item_id], token: params[:token])
   end
 end
