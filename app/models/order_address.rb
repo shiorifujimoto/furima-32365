@@ -9,10 +9,11 @@ class OrderAddress
     validates :city,          format: { with: /\A[ぁ-んァ-ン一-龥々]/ }
     validates :block
   end
-  validates :prefecture_id,   numericality: { other_than: 0 }
+  validates :prefecture_id, numericality: { other_than: 0 }
 
   def save
-    order = Order.create(user_id: user_id,item_id: item_id)
-    Address.create(phone_number: phone_number, postal_code: postal_code, prefecture_id: prefecture_id, city: city, block: block, build: build, order_id: order.id)
+    order = Order.create(user_id: user_id, item_id: item_id)
+    Address.create(phone_number: phone_number, postal_code: postal_code, prefecture_id: prefecture_id, city: city, block: block,
+                   build: build, order_id: order.id)
   end
 end
