@@ -5,11 +5,13 @@ class OrdersController < ApplicationController
   end
 
   def create
+    binding.pry
     @item = Item.find(params[:item_id])
     @order_address = OrderAddress.new(address_params)
     
     if @order_address.valid?
       @order_address.save
+      
       redirect_to root_path
       # Payjp.api_key =""
       # Payjp::Charge.create(
@@ -24,6 +26,6 @@ class OrdersController < ApplicationController
   private
 
   def address_params
-    params.require(:order_address).permit(:phone_number, :postal_code, :prefecture_id, :city, :block, :build).merge(user_id: current_user.id, item_id: params[:item_id])
+    params.require(:order_address).permit(:phone_number, :postal_code, :prefecture_id, :city, :block, :build).merge(user_id: current_user.id, item_id: params[:item_id], token: params[:token])
   end
 end
