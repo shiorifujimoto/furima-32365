@@ -1,5 +1,6 @@
 FactoryBot.define do
   factory :order_address do
+    association :item
     Faker::Config.locale = :ja
 
     token         { 'aaabbbccc111222' }
