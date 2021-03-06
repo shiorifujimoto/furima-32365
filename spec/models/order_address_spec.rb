@@ -14,6 +14,10 @@ RSpec.describe OrderAddress, type: :model do
       expect(@order_address).to be_valid
     end
 
+    it '建物番号を含め、全て揃っている場合は購入できる' do
+      expect(@order_address).to be_valid
+    end
+
     it 'tokenが空の場合購入できない' do
       @order_address.token = ''
       @order_address.valid?
