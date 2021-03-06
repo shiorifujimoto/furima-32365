@@ -3,9 +3,8 @@ require 'rails_helper'
 RSpec.describe OrderAddress, type: :model do
   describe '商品購入' do
     before do
-      @user = FactoryBot.create(:user) 
       @item = FactoryBot.create(:item)
-      @order_address = FactoryBot.build(:order_address,item_id: @item.id, user_id: @user.id)
+      @order_address = FactoryBot.build(:order_address,item_id: @item.id, user_id: @item.user_id)
       sleep 0.1
     end
 
@@ -33,7 +32,7 @@ RSpec.describe OrderAddress, type: :model do
     end
 
     it 'prefecture_idが0の場合購入できない' do
-      @order_address.prefecture_id = '0'
+      @order_address.prefecture_id = 0
       @order_address.valid?
       expect(@order_address.errors.full_messages).to include('Prefecture must be other than 0')
     end
@@ -64,6 +63,12 @@ RSpec.describe OrderAddress, type: :model do
 
     it 'phone_numberが12桁以上の場合購入できない' do
       @order_address.phone_number = '123456789012'
+      @order_address.valid?
+      expect(@order_address.errors.full_messages).to include('Phone number is invalid')
+    end
+
+    it 'phone_numberが12桁以上の場合購入できない' do
+      @order_address.phone_number = 'abc12345678'
       @order_address.valid?
       expect(@order_address.errors.full_messages).to include('Phone number is invalid')
     end
