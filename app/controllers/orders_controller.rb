@@ -2,7 +2,6 @@ class OrdersController < ApplicationController
   before_action :authenticate_user!, only: [:index, :create]
   before_action :set_item, only: [:index, :create, :correct_user]
   before_action :correct_user, only: [:index, :create]
-  before_action :sold_out_user, only: [:index,:create]
 
   def index
     @order_address = OrderAddress.new
@@ -42,10 +41,7 @@ class OrdersController < ApplicationController
   end
 
   def correct_user
-    redirect_to root_path if current_user.id == @item.user.id
+    redirect_to root_path if ( current_user.id == @item.user.id ) || ( !@item.order.nil? )
   end
 
-  def sold_out_user
-    redirect_to root_path unless @item.order.nil?
-  end
 end
